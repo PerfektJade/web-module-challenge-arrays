@@ -45,10 +45,15 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy() {
-  return [...originalFlavors];
+function copy(array) {
+  return [...array];
 }
-console.log('Task 1:', copy);
+
+console.log('Task 1:', copy(originalFlavors));
+
+// function copy(/*your code here*/){
+//   /*your code here*/
+// }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
@@ -60,15 +65,18 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-
-function is31Flavors(){
-  if(originalFlavors.length === 31){
+function is31Flavors(array){
+  if(array.length === 31){
     return true;
   } else{
     return false;
   }
  }
-console.log('Task 2:', is31Flavors);
+console.log('Task 2:', is31Flavors(originalFlavors));
+
+// function is31Flavors(/*your code here*/){
+//   /*your code here*/
+//  }
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -83,13 +91,16 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-
-function addFlavor(){
-  originalFlavors.splice(0, 0, "Rainbow Sherbert");
-  return originalFlavors;
+function addFlavor(array, string){
+  array.unshift(string);
+  return array;
  }
 
-console.log('Task 3:', addFlavor);
+console.log('Task 3:', addFlavor(originalFlavors, "Rainbow Sherbert"));
+
+// function addFlavor(/*your code here*/){
+//   /*your code here*/
+//  }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -102,11 +113,15 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
+function removeLastFlavor(array){
+  array.pop();
+  return array;
+ }
+ console.log('Task 4:', removeLastFlavor(originalFlavors));
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
-}
-
+// function removeLastFlavor(/*your code here*/){
+//   /*your code here*/
+//  }
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
